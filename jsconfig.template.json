@@ -1,0 +1,29 @@
+{
+  "include": [
+    "**/*.vue",
+    "components",
+    "layouts",
+    "middleware",
+    "mixins",
+    "pages",
+    "plugins",
+    "serverMiddleware",
+    "store",
+    "tests",
+    "@types",
+    "*.js"
+  ],
+  "exclude": ["node_modules", ".nuxt"],
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "lib": ["dom", "esnext"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "paths": {}
+  }
+}
