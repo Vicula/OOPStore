@@ -2,9 +2,8 @@ const express = require('express')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
-const MongoClient = require('mongodb').MongoClient
 const config = require('../nuxt.config.js')
-// const apiRouter = require('../routes/apiRoutes.js')
+const apiRoutes = require('./routes/apiRoutes.js')
 
 // Import and Set Nuxt.js options
 
@@ -23,24 +22,13 @@ async function start() {
   } else {
     await nuxt.ready()
   }
-
+  app.use('/api', apiRoutes)
   // Give nuxt middleware to express
   app.use(nuxt.render)
-
-  // Init MongoDB
-  MongoClient.connect(
-    'mongodb+srv://admin:admin@cluster0-qeezr.mongodb.net/test?retryWrites=true&w=majority',
-    (err, client) => {
-      if (err) return consola.error(err)
-      // Listen the server
-      app.listen(port, host)
-      consola.ready({
-        message: `Server listening on http://${host}:${port}`,
-        badge: true
-      })
-    }
-  )
-
-  // app.use('/api', apiRouter)
+  app.listen(port, host)
+  consola.ready({
+    message: `Server listening on http://${host}:${port}`,
+    badge: true
+  })
 }
 start()

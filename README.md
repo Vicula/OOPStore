@@ -38,4 +38,12 @@ $ yarn start
 $ yarn generate
 ```
 
+## Mongo commands
+
+```bash
+# Create a new collection
+$ db.createCollection("collection-name")
+
+```
+
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
