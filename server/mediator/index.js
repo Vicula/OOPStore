@@ -1,28 +1,30 @@
 module.exports = (function(){
-  var subscribe = function(channel, fn){
-      if (!mediator.channels[channel]) mediator.channels[channel] = [];
-      mediator.channels[channel].push({ context: this, callback: fn });
-      return this;
+
+  let subscribe = function(channel, fn){
+      if (!this.channels[channel]) this.channels[channel] = []
+      this.channels[channel].push({ context: this, callback: fn })
+      return this
   },
 
   publish = function(channel){
-      if (!mediator.channels[channel]) return false;
-      var args = Array.prototype.slice.call(arguments, 1);
-      for (var i = 0, l = mediator.channels[channel].length; i < l; i++) {
-          var subscription = mediator.channels[channel][i];
-          subscription.callback.apply(subscription.context, args);
+      if (!this.channels[channel]) return false
+      let args = Array.prototype.slice.call(arguments, 1)
+      for (let i = 0, l = this.channels[channel].length; i < l; i++) {
+          let subscription = this.channels[channel][i]
+          subscription.callback.apply(subscription.context, args)
       }
-      return this;
-  };
+      return this
+  }
+
 
   return {
       channels: {},
       publish: publish,
       subscribe: subscribe,
       installTo: function(obj){
-          obj.subscribe = subscribe;
-          obj.publish = publish;
+          obj.subscribe = subscribe
+          obj.publish = publish
       }
-  };
+  }
 
 }())

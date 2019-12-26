@@ -5,20 +5,20 @@ const Model = require('./models/user.js.js')
 const router = Router()
 
 // const users = []
-const db = 'mongodb://127.0.0.1:27017/calumoz'
+const db = 'mongodb://127.0.0.1:27017/oopstore'
 
 mongoose.connect(db, (err, res) => {
   if (err) {
-    console.log('Failed to connected to ' + db)
+    console.log('Failed to connected to ' + db,err)
   } else {
     console.log('Connected to ' + db)
   }
 })
 let data = mongoose.connection
-data.on("error", console.error.bind(console, "connection error"));
+data.on("error", console.error.bind(console, "connection error"))
 data.once("open", function(callback){
-  console.log("Connection Succeeded");
-});
+  console.log("Connection Succeeded")
+})
 // GET
 router.get('/users', (req, res) => {
   Model.find({}, (err, users) => {
