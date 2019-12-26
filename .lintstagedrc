@@ -1,0 +1,6 @@
+{
+  "*.vue": ["yarn eslint --fix --ext .vue", "prettier --write", "git add"],
+  "*.js": ["yarn eslint --fix", "prettier --write", "git add"],
+  "*.json": ["prettier --write --parser json", "git add"],
+  ".*rc": ["prettier --write --parser json", "git add"]
+}

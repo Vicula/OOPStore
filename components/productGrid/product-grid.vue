@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>
-      <GridRow v-for="product in products" :key="product.id" />
+    <div v-for="(group,index) in gridGroup(index)" :key="index">
+      <GridRow/>
     </div>
   </div>
 </template>
@@ -29,6 +29,13 @@ export default {
       }
     }
   },
+
+  methods:{
+    gridGroup(index){
+      let offset = index*this.cols
+      return
+    }
+  }
 }
 </script>
 <style></style>

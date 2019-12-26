@@ -1,6 +1,6 @@
 const { Router } = require('express')
 const mongoose = require('mongoose')
-const Model = require('../models/user.js')
+const Model = require('./models/user.js.js')
 
 const router = Router()
 
@@ -14,7 +14,11 @@ mongoose.connect(db, (err, res) => {
     console.log('Connected to ' + db)
   }
 })
-
+let data = mongoose.connection
+data.on("error", console.error.bind(console, "connection error"));
+data.once("open", function(callback){
+  console.log("Connection Succeeded");
+});
 // GET
 router.get('/users', (req, res) => {
   Model.find({}, (err, users) => {

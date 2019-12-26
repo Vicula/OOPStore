@@ -9,7 +9,11 @@
         OOP Store with all the bells and whistles
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
+        <a
+          href="https://nuxtjs.org/"
+          target="_blank"
+          class="button--green"
+        >
           Documentation
         </a>
         <a
@@ -25,7 +29,7 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from '@/components/Logo.vue'
 
 export default {
   components: {
