@@ -1,12 +1,12 @@
-module.exports = (function(){
+module.exports = () => {
 
-  let subscribe = function(channel, fn){
+  let subscribe = (channel, fn) => {
       if (!this.channels[channel]) this.channels[channel] = []
       this.channels[channel].push({ context: this, callback: fn })
       return this
   },
 
-  publish = function(channel){
+  publish = (channel) =>{
       if (!this.channels[channel]) return false
       let args = Array.prototype.slice.call(arguments, 1)
       for (let i = 0, l = this.channels[channel].length; i < l; i++) {
@@ -21,10 +21,10 @@ module.exports = (function(){
       channels: {},
       publish: publish,
       subscribe: subscribe,
-      installTo: function(obj){
+      installTo: (obj) => {
           obj.subscribe = subscribe
           obj.publish = publish
       }
   }
 
-}())
+}

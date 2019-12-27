@@ -1,3 +1,5 @@
+import {productsModule} from './private'
+
 export default () => ({
-  products:{}
+  products: productsModule
 })

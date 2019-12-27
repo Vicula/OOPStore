@@ -7,10 +7,7 @@ const { Nuxt, Builder } = require('nuxt')
 const mongoose = require('mongoose')
 const fileWalker = require('../helpers/filewalker')
 const app = express()
-//Include mediator to make routes dynamically added
-const mediator = require('./mediator')
 const config = require('../nuxt.config.js')
-// const apiRoutes = require('./routes/apiRoutes.js')
 
 require('dotenv').config()
 
@@ -39,13 +36,6 @@ async function start() {
   app.use(bodyParser.json())
   app.use(cors())
 
-  mediator.routes = []
-  mediator.subscribe('publishRoutes', function(arg){
-    console.log(this.routes)
-    this.name = arg
-    console.log(this.routes)
-  })
-
   const uri = process.env.DB_URI
   mongoose.connect(uri,{ useNewUrlParser: true, useCreateIndex: true})
   let db = mongoose.connection
@@ -56,19 +46,21 @@ async function start() {
 
   let path = 'server/routes'
 
+  // Give nuxt middleware to express
+  await app.use(nuxt.render)
+
   fileWalker(path,(err,data)=>{
     if (err) throw err
     data.map((path)=>{
       if(path.includes('index.js')){
         let router = require('.'+path.split('/server')[1])
-        app.use(path.split('/routes')[1].split('/index.js')[0],router)
+        app.use('/api'+path.split('/routes')[1].split('/index.js')[0],router)
       }
     })
   })
 
 
-  // Give nuxt middleware to express
-  app.use(nuxt.render)
+
   app.listen(port, host)
   consola.ready({
     message: `Server listening on http://${host}:${port}`,

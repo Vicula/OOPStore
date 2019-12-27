@@ -20,6 +20,8 @@ router.route('/add').post((req, res) => {
   const tags = req.body.tag
   const images = req.body.images
 
+  console.log('I AM RUNNING THAT MEANS THEY KNOW ME')
+
   const newProduct = new Product({
     title,
     handle,
