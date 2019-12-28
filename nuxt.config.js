@@ -17,6 +17,15 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
+   ** SilverMiddleware
+   */
+  serverMiddleware: [
+    {
+      path: '/api',
+      handler: '~/server/api',
+    },
+  ],
+  /*
    ** Customize the progress-bar color
    */
   loading: { color: '#fff' },

@@ -7,10 +7,10 @@ export const firstEncrypt = (v)=>{
 }
 export const firstDecrypt = (v)=>{
   let b  = cjs.AES.decrypt(v, prv)
-  return JSON.parse(b.toString(cjs.enc.Utf8))
+  return b.toString()
 }
 export const secEncrypt = (v)=>{
-  return cjs.AES.encrypt(JSON.stringify(v), prv).toString()
+  return cjs.AES.encrypt(v, prv).toString()
 }
 export const secDecrypt = (v)=>{
   let b  = cjs.AES.decrypt(v, key)

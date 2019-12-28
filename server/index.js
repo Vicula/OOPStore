@@ -5,7 +5,6 @@ const morgan = require('morgan')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const mongoose = require('mongoose')
-const fileWalker = require('../helpers/filewalker')
 const app = express()
 const config = require('../nuxt.config.js')
 
@@ -44,20 +43,8 @@ async function start() {
     console.log("Connection Succeeded")
   })
 
-  let path = 'server/routes'
-
   // Give nuxt middleware to express
-  await app.use(nuxt.render)
-
-  fileWalker(path,(err,data)=>{
-    if (err) throw err
-    data.map((path)=>{
-      if(path.includes('index.js')){
-        let router = require('.'+path.split('/server')[1])
-        app.use('/api'+path.split('/routes')[1].split('/index.js')[0],router)
-      }
-    })
-  })
+  app.use(nuxt.render)
 
 
 

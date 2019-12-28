@@ -1,5 +1,6 @@
 import {productsModule} from './private'
 
 export default () => ({
-  products: productsModule
+  products: productsModule,
+  safeProducts: ''
 })
