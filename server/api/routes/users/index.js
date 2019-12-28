@@ -9,7 +9,7 @@ router['GET/'] = (req, res) => { //GET
     .catch(err => res.status(400).json('Error: ' + err))
 }
 
-router['GET/:id'] = (req, res, c) => { //GET
+router['GET/:id'] = (req, res, c) => { //GET login
   User.findById(req.params.id)
     .then(users => {
       let p = secEncrypt(firstEncrypt(users))
@@ -18,13 +18,16 @@ router['GET/:id'] = (req, res, c) => { //GET
     .catch(err => res.status(400).json('Error: ' + err))
 }
 
-router['POST/add'] = (req, res) => { //POST
-  const username = req.body.username
+router['POST/add'] = (req, res, c) => { //POST register
+  const fname = req.body.f
+  const lname = req.body.l
+  const _id = req.body.e
+  const password = req.body.p
 
-  const newUser = new User({username})
+  const newUser = new User({fname,lname,_id,password})
 
   newUser.save()
-    .then(() => res.json('User added!'))
+    .then(user => {if(c){c(user)}else{res.json(user)}})
     .catch(err => res.status(400).json('Error: ' + err))
 }
 

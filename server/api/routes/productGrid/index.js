@@ -41,7 +41,7 @@ router['POST/add'] = (req, res) => { // POST
   })
 
   newProduct.save()
-    .then(() => {if(c){c()}else{res.json('product added!')}})
+    .then(prod => {if(c){c()}else{res.json(prod)}})
     .catch(err => res.status(400).json('Error: ' + err))
 }
 
