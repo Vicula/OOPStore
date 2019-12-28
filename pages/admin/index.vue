@@ -6,7 +6,11 @@
 
 <script>
 export default {
-
+  //used to 404 if not whitelisted user
+  validate ({ params }) {
+    // Must be a number
+    return /^\d+$/.test(params.id)
+  }
 }
 </script>
 

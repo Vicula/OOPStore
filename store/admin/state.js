@@ -1,4 +1,4 @@
-import productsModule from './private'
+import {productsModule} from './private'
 
 export default () => ({
   products: productsModule,

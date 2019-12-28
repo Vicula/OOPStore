@@ -2,7 +2,7 @@ const {firstEncrypt,secEncrypt} = require('../../../../helpers/crypt.js')
 let Product = require('./models/product')
 let router = {}
 
-router['TYPE'] = 'MAIN'
+router['TYPE'] = 'MAIN' // Admin designation
 
 router['GET/'] = (req, res, c) => { //GET
   Product.find()

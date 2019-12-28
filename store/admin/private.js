@@ -1,6 +1,6 @@
 const {firstDecrypt, secDecrypt, firstEncrypt, secEncrypt} = require('~/helpers/crypt')
 
-export default () => {
+export const productsModule = () => {
   var _private = { //private
     p: [],
     set: (v) => {
