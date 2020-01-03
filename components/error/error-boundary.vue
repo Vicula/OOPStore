@@ -2,18 +2,20 @@
   <div>
     <slot
       v-if="err"
-      v-bind:err="err"
-      v-bind:vm="vm"
-      v-bind:info="info"
+      :err="err"
+      :vm="vm"
+      :info="info"
       name="error"
-    >Something went wrong</slot>
-    <slot v-else></slot>
+    >
+      Something went wrong
+    </slot>
+    <slot v-else />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'error-boundary',
+  name: 'ErrorBoundary',
   props: {
     stopPropagation: Boolean
   },

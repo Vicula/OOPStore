@@ -1,6 +1,5 @@
 <template>
-  <section class="c-header">
-  </section>
+  <section class="c-header" />
 </template>
 <script>
 export default {

@@ -1,7 +1,10 @@
 <template>
   <div>
-    <div v-for="(group,index) in gridGroup(index)" :key="index">
-      <GridRow/>
+    <div
+      v-for="(group,index) in gridGroup(index)"
+      :key="index"
+    >
+      <GridRow />
     </div>
   </div>
 </template>
