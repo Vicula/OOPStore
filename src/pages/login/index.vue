@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import login from '~/components/admin/login'
-import register from '~/components/admin/register'
-import error from '~/components/error/error-boundary'
+import login from '../../components/admin/login'
+import register from '../../components/admin/register'
+import error from '../../components/error/error-boundary'
 import {mapActions} from 'vuex'
 
 export default {
@@ -26,6 +26,8 @@ export default {
     register,
     error
   },
+
+  middleware: 'guest',
 
   data: ()=>{
     return{

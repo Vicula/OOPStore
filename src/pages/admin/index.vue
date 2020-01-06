@@ -1,15 +1,27 @@
 <template>
   <div class="container">
-    <div />
+    <error><adminNav /></error> <error><adminDisplay /></error>
   </div>
 </template>
 
 <script>
+import error from '../../components/error/error-boundary'
+import adminDisplay from '../../components/admin/admin-display'
+import adminNav from '../../components/admin/admin-nav'
+import {mapGetters} from 'vuex'
+
 export default {
+  components:{
+    adminNav,
+    adminDisplay,
+    error
+  },
+
   //used to 404 if not whitelisted user
-  validate ({ params }) {
-    // Must be a number
-    return /^\d+$/.test(params.id)
+  middleware: 'auth',
+
+  computed:{
+    ...mapGetters('admin', {getNavList:'getNavList'})
   }
 }
 </script>

@@ -1,4 +1,3 @@
-
 export default {
   isAuthenticated(s) {
     return s.auth.loggedIn

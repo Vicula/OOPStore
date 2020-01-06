@@ -2,7 +2,11 @@ let User = require('./models/user')
 const {firstDecrypt, secDecrypt, firstEncrypt, secEncrypt} = require('../../../../helpers/crypt')
 let router = {}
 
-router['TYPE'] = 'MAIN' // Admin designation
+router['CAT'] = 'MAIN' // Admin designation
+
+router['TITLE'] = 'Users'
+
+router['TYPE'] = 'USERS'
 
 router['GET/'] = (req, res) => { //GET
   User.find()
@@ -10,15 +14,15 @@ router['GET/'] = (req, res) => { //GET
     .catch(err => res.status(400).json('Error: ' + err))
 }
 
-router['POST/'] = (req, res, c) => { //POST login
-  const id = req.url.replace('/api', '').match(/[^/]+/g)[1]
-  User.findById(id)
-    .then(users => {
-      let p = secEncrypt(firstEncrypt(users))
-      if(c){c(p)}else{res.json(p)}
-    })
-    .catch(err => res.status(400).json('Error: ' + err))
-}
+// router['POST/'] = (req, res, c) => { //POST login
+//   const id = req.url.replace('/api', '').match(/[^/]+/g)[1]
+//   User.findById(id)
+//     .then(users => {
+//       let p = secEncrypt(firstEncrypt(users))
+//       if(c){c(p)}else{res.json(p)}
+//     })
+//     .catch(err => res.status(400).json('Error: ' + err))
+// }
 
 router['POST/add'] = (req, res, c) => { //POST registers
   const fname = req.data.f
