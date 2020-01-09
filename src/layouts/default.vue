@@ -9,12 +9,18 @@
 import siteHeader from '~/components/header'
 import siteFooter from '~/components/footer'
 import error from '~/components/error/error-boundary'
+import {mapActions} from 'vuex'
+
 export default {
+
   components:{
     siteHeader,
     siteFooter,
     error
-  }
+  },
+  mehods:{
+    ...mapActions('productGrid',['fetchProducts'])
+  },
 }
 </script>
 <style>

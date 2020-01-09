@@ -1,6 +1,7 @@
 export default {
-  setUser(s,d){
+  setAdminState(s,d){
     s.users.user.facade({data:d})
     s.users.safeUser = d
-  }
+  },
+
 }

@@ -4,10 +4,10 @@ export default () => {
   var _private = { //private
     p: [],
     set: (v) => {
-      this.p = secDecrypt(firstDecrypt(v))
+      this.p = secEncrypt(firstEncrypt(v))
     },
     get: () => {
-      return secEncrypt(firstEncrypt(this.p))
+      return secDecrypt(firstDecrypt(this.p))
     },
 
   }

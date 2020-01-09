@@ -1,10 +1,10 @@
 <template>
   <div>
     <div
-      v-for="(group,index) in gridGroup(index)"
+      v-for="(group,index) in gridGroup()"
       :key="index"
     >
-      <GridRow />
+      <GridRow :group="group" />
     </div>
   </div>
 </template>
@@ -35,8 +35,13 @@ export default {
 
   methods:{
     gridGroup(index){
-      let offset = index*this.cols
-      return
+      let i,j,t,chunk = 4
+      let arr = []
+      for (i=0,j=this.products.length; i<j; i+=chunk) {
+          t = this.products.slice(i,i+chunk)
+          arr.push(t)
+      }
+      return arr
     }
   }
 }

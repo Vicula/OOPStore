@@ -1,5 +1,6 @@
 import {productsModule} from './private'
 
 export default () => ({
-  adminState : "Products"
+  adminState : "Home",
+  navList: {}
 })

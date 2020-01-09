@@ -19,8 +19,16 @@ fileWalker(path,(e,d)=>{
 router['CAT'] = 'ADMIN' // Admin designation
 
 router['GET/'] = (req, res, c) => { //GET
-  res.json(modules)
+  let o = {}
+  Object.keys(modules).map((k)=>{
+    o[k] = {
+      type:modules[k]['TYPE'],
+      cat:modules[k]['CAT'],
+      title:modules[k]['TITLE'],
+    }
+  })
+  res.json(o)
 }
 
-modules['admin'] = router
+// modules['admin'] = router
 module.exports = router

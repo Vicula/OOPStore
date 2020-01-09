@@ -1,32 +1,32 @@
 <template>
   <section class="admin-display">
-
+    <home v-if="active === 'Home'" />
+    <products v-else-if="active === 'Products'" />
+    <users v-else-if="active === 'Users'" />
   </section>
 </template>
 <script>
+import products from './types/products/index'
+import users from './types/users'
+import home from './types/home'
+
 export default {
-  props:{
-    links:{
-      type: Object,
-      default: ()=>{},
-      required:true
-    }
+  components:{
+    products,
+    users,
+    home
   },
 
-  data: () => {
-    return {
-      e: '',
-      p: ''
+  props:{
+    active:{
+      type: String,
+      default:'Home',
+      required: true
     }
-  }
+  },
 }
 </script>
 <style>
 
-input{
-  width: 250px;
-  padding: 5px;
-  margin-bottom: 15px;
-}
 
 </style>

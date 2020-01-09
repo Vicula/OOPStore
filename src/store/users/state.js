@@ -1,6 +1,6 @@
-import userModule from './private'
+// import userModule from './private'
 
 export default () => ({
-  user: userModule,
-  safeUser: ''
+  // user: userModule,
+  adminState: 'Home'
 })

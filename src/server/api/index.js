@@ -9,7 +9,7 @@ const methods = {
 }
 
 let runRouter = (res,req,ct,m,u) => {
-  if (m === methods.get){
+  if (m === methods.get || m === methods.delete ){
     if(req.url){
       router(
         {method: m, url: u},

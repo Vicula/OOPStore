@@ -1,6 +1,8 @@
 export default {
-  setProducts(s,d){
-    s.productGrid.products.facade({data:d})
-    s.productGrid.safeProducts
+  setAdminState(s,d){
+    s.adminState = d
+  },
+  setNavList(s,d){
+    s.navList = d
   }
 }

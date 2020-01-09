@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <error><adminNav /></error> <error><adminDisplay /></error>
+    <error><adminNav :links="getNavList" :active="getAdminState" :submit="setAdminState"/></error> <error><adminDisplay :active="getAdminState" /></error>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 import error from '../../components/error/error-boundary'
 import adminDisplay from '../../components/admin/admin-display'
 import adminNav from '../../components/admin/admin-nav'
-import {mapGetters} from 'vuex'
+import {mapGetters,mapActions,mapMutations} from 'vuex'
 
 export default {
   components:{
@@ -17,11 +17,26 @@ export default {
     error
   },
 
+  data(){
+    return {
+      list:{}
+    }
+  },
+
   //used to 404 if not whitelisted user
   middleware: 'auth',
 
+  mounted(){
+    this.fetchNavList()
+  },
+
+  methods:{
+    ...mapMutations('admin',['setAdminState']),
+    ...mapActions('admin',['fetchNavList'])
+  },
+
   computed:{
-    ...mapGetters('admin', {getNavList:'getNavList'})
+    ...mapGetters('admin', ['getNavList','getAdminState'])
   }
 }
 </script>
@@ -29,32 +44,17 @@ export default {
 <style>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  min-height: calc(100vh - 81px);
+  display:flex;
+}
+.container > div{
+  display:block;
+}
+.container > div:first-child{
+  width: 20%;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.container > div:last-child{
+  width: 80%;
 }
 </style>

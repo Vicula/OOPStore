@@ -11,13 +11,14 @@ router['TYPE'] = 'PRODUCT'
 router['GET/'] = (req, res, c) => { //GET
   Product.find()
     .then(products => {
-      let p = secEncrypt(firstEncrypt(products))
+      // let p = secEncrypt(firstEncrypt(products))
+      let p = products
       if(c){c(p)}else{res.json(p)}
     })
     .catch(err => res.status(400).json('Error: ' + err))
 }
 
-router['POST/add'] = (req, res) => { // POST
+router['POST/add'] = (req, res,c) => { // POST
   const title = req.data.title
   const handle = req.data.handle
   const desc = req.data.desc
@@ -29,6 +30,7 @@ router['POST/add'] = (req, res) => { // POST
   const productType = req.data.productType
   const tags = req.data.tag
   const images = req.data.images
+
 
   const newProduct = new Product({
     title,
@@ -58,14 +60,15 @@ router['GET/:id'] = (req, res, c) => { //GET
     .catch(err => res.status(400).json('Error: ' + err))
 }
 
-router['DELETE/:id'] = (req, res, c) => { //DELETE
-  Product.findByIdAndDelete(req.params.id)
+router['DELETE/'] = (req, res, c) => { //DELETE
+  Product.findByIdAndDelete(req.url.split('?id=')[1])
     .then(() => {if(c){c()}else{res.json('product deleted!')}})
     .catch(err => res.status(400).json('Error: ' + err))
 }
 
 router['POST/update/:id'] = (req, res, c) => { //POST
-  Product.findById(req.params.id)
+
+  Product.findById(req.url.split('?id=')[1])
     .then(product => {
       product.title = req.data.title
       product.handle = req.data.handle

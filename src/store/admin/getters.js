@@ -1,9 +1,11 @@
 import a from 'axios'
 
 export default {
-  getNavList: () => {
-    a.get('/api/admin').then((r)=>{
-      return r.data
-    })
+  getNavList: (s) => {
+   return s.navList
   },
+  getAdminState: (s) => {
+    console.log('I AM GETTNG ADMIN STATE')
+    return s.adminState
+  }
 }

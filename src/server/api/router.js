@@ -42,10 +42,11 @@ module.exports = (o, res, c) => {
   const m = o.method && o.method.toUpperCase()
   const r = getModule(o.url)
   let a = getAction(o.url,m)
+  // res.end(a)
   if(r[a]){
     r[a](o, res, c)
   }else{
     res.setHeader('content-type', 'text/html')
-    res.end('doesnt have the action in the module')
+    res.end(a)
   }
 }

@@ -24,7 +24,7 @@ router['GET/'] = (req, res) => { //GET
 //     .catch(err => res.status(400).json('Error: ' + err))
 // }
 
-router['POST/add'] = (req, res, c) => { //POST registers
+router['POST/add'] = (req, res, c) => { //POST registers for admin
   const fname = req.data.f
   const lname = req.data.l
   const _id = req.data.e
