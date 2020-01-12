@@ -9,7 +9,7 @@
         v-for="(link,key) in links"
         :key="key"
         :class="active === link.title ? 'linkActive': 'link'"
-        @click="submit(link.title)"
+        @click="submit(key)"
       >{{ link.title }}</span>
     </div>
     <div class="nav-footer" />

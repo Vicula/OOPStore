@@ -3,11 +3,12 @@
     <newProduct
       v-if="newProd"
       :state="()=>{newProd=false}"
-      :add="addProduct"
+      :add="addItem()"
+      :schema="scema.schema"
     />
     <productList
       v-else-if="!editing"
-      :products="safeProducts"
+      :products="items"
       :submit="()=>{newProd=true}"
       :edit="startEdit"
     />
@@ -15,8 +16,9 @@
       v-else
       :state="()=>{editing=false}"
       :prod="prod"
-      :update="updateProduct"
-      :delete-prod="deleteProduct"
+      :update="updateItem()"
+      :delete-prod="deleteIt()"
+      :schema="scema.schema"
     />
   </section>
 </template>
@@ -24,7 +26,6 @@
 import newProduct from './newProduct'
 import productList from './productList'
 import editProduct from './editProduct'
-import {mapActions,mapState} from 'vuex'
 
 export default {
   components:{
@@ -33,29 +34,43 @@ export default {
     editProduct
   },
 
+  props:{
+    schema:{
+      type: Object,
+      default: ()=>{return{}}
+    },
+    route:{
+      type:String,
+      default:'produtGrid'
+    }
+  },
+
   data: () => {
     return {
       newProd: false,
       editing: false,
-      prod: {}
+      prod: {},
+      items: []
     }
+  },
+  mounted(){
+    this.fetchItems()
   },
 
   methods:{
-    ...mapActions('productGrid',['addProduct','fetchProducts','updateProduct','deleteProduct']),
-    fetch(){
-      this.fetchProducts()
+    fetchItems(){
+      let vm = this
+      this.$store._actions[this.route+'/fetch'][0]().then(()=>{
+        vm.items = this.$store.state[this.route].items
+      })
     },
+    updateItem(){return this.$store._actions[this.route+'/update'][0]},
+    addItem(){return this.$store._actions[this.route+'/add'][0]},
+    deleteIt(){return this.$store._actions[this.route+'/deleteItem'][0]},
     startEdit(d){
       this.prod = d
       this.editing = true
     }
-  },
-  computed:{
-    ...mapState('productGrid',['safeProducts'])
-  },
-  mounted(){
-    this.fetch()
   }
 }
 </script>

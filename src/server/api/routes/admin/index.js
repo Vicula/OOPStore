@@ -25,6 +25,7 @@ router['GET/'] = (req, res, c) => { //GET
       type:modules[k]['TYPE'],
       cat:modules[k]['CAT'],
       title:modules[k]['TITLE'],
+      schema:modules[k]['SCHEMA']
     }
   })
   res.json(o)

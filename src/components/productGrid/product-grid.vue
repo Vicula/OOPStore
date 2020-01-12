@@ -35,7 +35,7 @@ export default {
 
   methods:{
     gridGroup(index){
-      let i,j,t,chunk = 4
+      let i,j,t,chunk = this.cols
       let arr = []
       for (i=0,j=this.products.length; i<j; i+=chunk) {
           t = this.products.slice(i,i+chunk)

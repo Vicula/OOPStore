@@ -8,14 +8,6 @@
         name="title"
       >
     </div>
-    <!-- <div>
-      <input
-        v-model="handle"
-        type="text"
-        placeholder=""
-        name="email"
-      >
-    </div> -->
     <div>
       <input
         v-model="desc"
@@ -87,6 +79,10 @@ export default {
       default:()=>{}
     },
     prod:{
+      type:Object,
+      default:()=>{return{}}
+    },
+    schema:{
       type:Object,
       default:()=>{return{}}
     }

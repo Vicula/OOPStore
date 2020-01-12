@@ -6,7 +6,13 @@
         :active="getAdminState"
         :submit="setAdminState"
       />
-    </error> <error><adminDisplay :active="getAdminState" /></error>
+    </error>
+    <error>
+      <adminDisplay
+        :active="getAdminState"
+        :routes="getNavList"
+      />
+    </error>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="shop">
-    <prodgrid :products="safeProducts" />
+    <prodgrid :products="items" />
   </div>
 </template>
 
@@ -12,13 +12,14 @@ export default {
     prodgrid
   },
   methods:{
-    ...mapActions('productGrid',['fetchProducts']),
-    fetch(){this.fetchProducts()}
+    ...mapActions('productGrid',['fetch']),
+    fetchItems(){this.fetch()}
   },
   computed:{
-    ...mapState('productGrid',['safeProducts','products'])
+    ...mapState('productGrid',['items','products'])
   },
-  mounted(){this.fetch()}
+  mounted(){this.fetchItems()
+  }
 
 }
 </script>

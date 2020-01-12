@@ -1,6 +1,6 @@
-import productsModule from './private'
+// import productsModule from './private'
 
 export default () => ({
-  products: productsModule,
-  safeProducts: ''
+  // products: productsModule,
+  items: []
 })
