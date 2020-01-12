@@ -64,7 +64,9 @@
         name="image"
       >
     </div>
-    <button @click="addProd">Add</button>
+    <button @click="addProd">
+      Add
+    </button>
   </section>
 </template>
 <script>

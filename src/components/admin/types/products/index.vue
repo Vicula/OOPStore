@@ -1,8 +1,23 @@
 <template>
   <section class="productsDisplay">
-    <newProduct v-if="newProd" :state="()=>{newProd=false}" :add="addProduct" />
-    <productList :products="safeProducts" :submit="()=>{newProd=true}" :edit="startEdit" v-else-if="!editing" />
-    <editProduct v-else :state="()=>{editing=false}" :prod="prod" :update="updateProduct" :deleteProd="deleteProduct" />
+    <newProduct
+      v-if="newProd"
+      :state="()=>{newProd=false}"
+      :add="addProduct"
+    />
+    <productList
+      v-else-if="!editing"
+      :products="safeProducts"
+      :submit="()=>{newProd=true}"
+      :edit="startEdit"
+    />
+    <editProduct
+      v-else
+      :state="()=>{editing=false}"
+      :prod="prod"
+      :update="updateProduct"
+      :delete-prod="deleteProduct"
+    />
   </section>
 </template>
 <script>

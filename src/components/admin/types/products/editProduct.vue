@@ -64,7 +64,11 @@
         name="image"
       >
     </div>
-    <button @click="updateProd">update</button><br><br><br><button @click="delProd">Delete</button>
+    <button @click="updateProd">
+      update
+    </button><br><br><br><button @click="delProd">
+      Delete
+    </button>
   </section>
 </template>
 <script>
@@ -100,6 +104,15 @@ export default {
       image:''
     }
   },
+  mounted(){
+    this.title = this.prod.title
+    this.desc = this.prod.desc
+    this.sku = this.prod.sku
+    this.price = this.prod.price
+    this.vendor = this.prod.vendor
+    this.productType = this.prod.productType
+    this.images = this.prod.images
+  },
   methods:{
     updateProd(){
       console.log('iam firing')
@@ -120,15 +133,6 @@ export default {
       this.deleteProd(this.prod)
       this.state()
     }
-  },
-  mounted(){
-    this.title = this.prod.title
-    this.desc = this.prod.desc
-    this.sku = this.prod.sku
-    this.price = this.prod.price
-    this.vendor = this.prod.vendor
-    this.productType = this.prod.productType
-    this.images = this.prod.images
   }
 }
 </script>

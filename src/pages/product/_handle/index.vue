@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <prodDetail :prod="prod"/>
+    <prodDetail :prod="prod" />
   </div>
 </template>
 

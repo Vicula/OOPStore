@@ -1,7 +1,5 @@
 <template>
-  <section class="admin-display">
-
-  </section>
+  <section class="admin-display" />
 </template>
 <script>
 

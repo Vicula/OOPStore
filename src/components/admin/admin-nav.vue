@@ -1,10 +1,18 @@
 <template>
   <section class="admin-nav">
     <div class="nav-list">
-      <span :class="active === 'Home' ? 'linkActive': 'link'" @click="submit('Home')">Home</span>
-      <span v-for="(link,key) in links" :key="key" :class="active === link.title ? 'linkActive': 'link'" @click="submit(link.title)">{{link.title}}</span>
+      <span
+        :class="active === 'Home' ? 'linkActive': 'link'"
+        @click="submit('Home')"
+      >Home</span>
+      <span
+        v-for="(link,key) in links"
+        :key="key"
+        :class="active === link.title ? 'linkActive': 'link'"
+        @click="submit(link.title)"
+      >{{ link.title }}</span>
     </div>
-    <div class="nav-footer"></div>
+    <div class="nav-footer" />
   </section>
 </template>
 <script>

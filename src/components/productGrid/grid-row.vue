@@ -1,6 +1,10 @@
 <template>
   <div class="gridRow">
-    <gridItem v-for="(prod,key) in group" :key="key" :prod="prod" />
+    <gridItem
+      v-for="(prod,key) in group"
+      :key="key"
+      :prod="prod"
+    />
   </div>
 </template>
 <script>

@@ -1,6 +1,12 @@
 <template>
   <div class="container">
-    <error><adminNav :links="getNavList" :active="getAdminState" :submit="setAdminState"/></error> <error><adminDisplay :active="getAdminState" /></error>
+    <error>
+      <adminNav
+        :links="getNavList"
+        :active="getAdminState"
+        :submit="setAdminState"
+      />
+    </error> <error><adminDisplay :active="getAdminState" /></error>
   </div>
 </template>
 

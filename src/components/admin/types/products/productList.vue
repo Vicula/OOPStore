@@ -1,10 +1,22 @@
 <template>
   <section class="productsList">
-    <div><h2>{{title}}</h2><button @click="submit">Add New</button></div>
     <div>
-      <p v-if="!products.length">Loading</p>
+      <h2>{{ title }}</h2><button @click="submit">
+        Add New
+      </button>
+    </div>
+    <div>
+      <p v-if="!products.length">
+        Loading
+      </p>
       <section v-else>
-        <div v-for="(prod,key) in products" :key="key" @click="edit(prod)" ><span style="margin-bottom:15px;display:block;">{{prod.title}}</span></div>
+        <div
+          v-for="(prod,key) in products"
+          :key="key"
+          @click="edit(prod)"
+        >
+          <span style="margin-bottom:15px;display:block;">{{ prod.title }}</span>
+        </div>
       </section>
     </div>
   </section>

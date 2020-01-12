@@ -8,6 +8,20 @@ router['TITLE'] = 'Products'
 
 router['TYPE'] = 'PRODUCT'
 
+router['SCHEMA'] = {
+  title: String,
+  handle: String,
+  desc: String,
+  variants: Array,
+  options: Array,
+  sku: Number,
+  price: String,
+  vendor: String,
+  productType: String,
+  tags: String,
+  images: Array,
+}
+
 router['GET/'] = (req, res, c) => { //GET
   Product.find()
     .then(products => {
