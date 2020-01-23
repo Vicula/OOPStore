@@ -4,6 +4,7 @@
       v-for="(prod,key) in group"
       :key="key"
       :prod="prod"
+      :width="cols"
     />
     <div v-if="group.length < 3"></div>
     <div v-if="group.length < 2"></div>
@@ -19,6 +20,10 @@ export default {
     group:{
       type:Array,
       default:()=>{return []}
+    },
+    cols:{
+      type:Number,
+      default:3
     }
   }
 }

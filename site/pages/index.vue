@@ -1,6 +1,6 @@
 <template>
   <div class="shop">
-    <prodgrid :products="items" />
+    <prodgrid :products="items" :rows="2" />
   </div>
 </template>
 

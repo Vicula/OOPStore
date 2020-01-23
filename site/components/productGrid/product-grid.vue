@@ -4,7 +4,7 @@
       v-for="(group,index) in gridGroup()"
       :key="index"
     >
-      <GridRow :group="group" />
+      <GridRow :cols="cols" :group="group" />
     </div>
   </div>
 </template>
@@ -39,7 +39,7 @@ export default {
       let arr = []
       for (i=0,j=this.products.length; i<j; i+=chunk) {
           t = this.products.slice(i,i+chunk)
-          arr.push(t)
+         if (arr.length < this.rows) arr.push(t)
       }
       return arr
     }

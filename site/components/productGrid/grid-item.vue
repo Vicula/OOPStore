@@ -21,6 +21,10 @@ export default {
     prod:{
       type:Object,
       default:()=>{return {}}
+    },
+    width:{
+      type:Number,
+      default:3
     }
   },
 
