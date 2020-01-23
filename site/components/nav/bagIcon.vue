@@ -1,0 +1,39 @@
+<template>
+  <svg
+    width="24"
+    height="24"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:svg="http://www.w3.org/2000/svg"
+  >
+    <g>
+      <title>Layer 1</title>
+      <g
+        id="svg_1"
+        fill-rule="evenodd"
+        fill="none"
+      >
+        <path
+          id="svg_2"
+          d="m0.07508,-0.07508l24,0l0,24l-24,0l0,-24z"
+          opacity="0.628"
+        />
+        <g
+          id="svg_3"
+          stroke-width="2"
+          stroke="currentColor"
+        >
+          <path
+            id="svg_4"
+            d="m6.46308,6.92492a1,1 0 0 0 -0.994,0.894l-1.283,12a1,1 0 0 0 0.994,1.106l13.79,0a1,1 0 0 0 0.994,-1.106l-1.283,-12a1,1 0 0 0 -0.994,-0.894l-11.224,0z"
+          />
+          <path
+            id="svg_5"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            d="m15.07508,8.92492l0,-2.3c-0.013,-0.44 0,-3.7 -3,-3.7s-2.987,3.256 -3,3.7l0,2.3"
+          />
+        </g>
+      </g>
+    </g>
+  </svg>
+</template>
