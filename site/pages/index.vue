@@ -9,6 +9,9 @@
       <prodgrid :products="items" :rows="3" />
     </div>
     <billboard />
+    <div class="shop">
+      <prodgrid :products="items" :rows="5" />
+    </div>
   </div>
 </template>
 

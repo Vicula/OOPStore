@@ -1,10 +1,15 @@
 <template>
   <section class="hero">
     <div></div>
-    <div class="background"><img :src="require('@/assets/hero1.png')" /><img :src="require('@/assets/hero2.png')" /> <img :src="require('@/assets/hero3.png')" /></div>
+    <div class="background">
+    </div>
   </section>
 </template>
-<script></script>
+<script>
+  export default {
+
+  }
+</script>
 <style>
   .hero{
     width:100%;
