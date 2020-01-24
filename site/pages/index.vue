@@ -1,15 +1,27 @@
 <template>
-  <div class="shop">
-    <prodgrid :products="items" :rows="2" />
+  <div class="home">
+    <hero/>
+    <div class="shop">
+      <prodgrid :products="items" :rows="1" />
+    </div>
+    <billboard />
+    <div class="shop">
+      <prodgrid :products="items" :rows="3" />
+    </div>
+    <billboard />
   </div>
 </template>
 
 <script>
+import hero from '~/components/home/hero'
+import billboard from '~/components/home/billboard'
 import prodgrid from '~/components/productGrid/product-grid'
 import {mapState,mapActions} from 'vuex'
 export default {
   components:{
-    prodgrid
+    prodgrid,
+    billboard,
+    hero
   },
   methods:{
     ...mapActions('productGrid',['fetch']),
@@ -26,6 +38,7 @@ export default {
 
 <style>
 .shop{
+  padding:100px;
 }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <section class="c-header">
+  <section class="c-header" :class="windowTop > 100 ? 'c-header-fixed' : ''">
     <h1 class="headerh1">
-      OOP
+      Off - White
     </h1>
     <div class="nav">
       <accIcon />
@@ -23,15 +23,40 @@ export default {
     bagIcon,
     hamIcon,
     searchIcon
+  },
+  data(){
+    return {
+      windowTop:''
+    }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.onScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll)
+  },
+  methods: {
+    onScroll(e) {
+      this.windowTop = window.top.scrollY /* or: e.target.documentElement.scrollTop */
+    }
   }
+
 }
 </script>
 <style>
 
 .c-header {
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 100;
+  right:0;
   padding: 40px;
-  position: relative;
-  border-bottom: 1px solid;
+  color:white;
+}
+.c-header.c-header-fixed{
+  color:black;
+  background: white;
 }
 .headerh1{
   position: absolute;

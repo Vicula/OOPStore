@@ -1,5 +1,5 @@
 <template>
-  <div class="siteBody">
+  <div class="siteBody" >
     <section class="siteWrap">
       <error><siteHeader /></error>
       <nuxt />
@@ -44,6 +44,7 @@ html {
   height: 100%;
   margin: auto;
   background: white;
+  margin-top:80px;
 }
 
 *,

@@ -32,7 +32,7 @@ export default {
   .gridRow{
     display:flex;
     justify-content: space-between;
-    margin-bottom:50px;
+    margin-bottom:0.5%;
   }
   .gridRow > div{
     width: 33%;
