@@ -1,7 +1,17 @@
 <template>
-  <div @mouseenter="setLoop" @mouseleave="clearLoop" class="prodWrap">
-    <nuxt-link :to="'/product/'+prod._id">
+  <div  @mouseenter="setLoop" @mouseleave="clearLoop" class="prodWrap">
+    <!-- <nuxt-link :to="'/product/'+prod._id"> -->
+    <transition @before-enter="beforeEnter"
+          @enter="enter"
+          @after-enter="afterEnter"
+          @enter-cancelled="enterCancelled"
+
+          @before-leave="beforeLeave"
+          @leave="leave"
+          @after-leave="afterLeave"
+          @leave-cancelled="leaveCancelled">
       <div class="prodImg" :style="setGradient">
+
         <img
           :style="setFilter"
           :src="prod.images[0] ? require('@/assets/'+prod.images[0]+'.png') : 'https://picsum.photos/seed/oop/200/200'"
@@ -12,13 +22,13 @@
         <div class="prodSwatch">
           <span v-for="(filter,index) in filters" :key="index" @click.prevent.stop="changeFilter(index)" :class="index===activeFilter?'active':''" :style="`background:${filter};`"></span>
         </div>
-      </div>
 
-    </nuxt-link>
+      </div>
+      </transition>
+    <!-- </nuxt-link> -->
   </div>
 </template>
 <script>
-
 export default {
 
   props:{
@@ -31,6 +41,14 @@ export default {
       default:3
     }
   },
+
+  // watch: {
+  //   '$route' (to, from) {
+  //     const toDepth = to.path.split('/').length
+  //     const fromDepth = from.path.split('/').length
+  //     this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+  //   }
+  // },
 
   data(){
     return{
@@ -48,7 +66,10 @@ export default {
         gradientSpeed: 0.002,
         setFilter:'',
         setGradient: 'background:linear-gradient(0deg,#36D7B7,#F4D03F)',
-        interval: ''
+        interval: '',
+        show:false
+        // transitionName:'',
+
     }
   },
 
@@ -78,6 +99,9 @@ export default {
   },
 
   methods:{
+    enteredScene(){
+      this.show = !this.show
+    },
     changeFilter(filter){
       this.activeFilter = filter;
       switch(filter){
@@ -155,6 +179,49 @@ export default {
       }
 
       return array;
+    },
+    // --------
+    // ENTERING
+    // --------
+
+    beforeEnter(el) {
+      console.log(el,'beforeEnter')
+      // ...
+    },
+    // the done callback is optional when
+    // used in combination with CSS
+    enter(el, done) {
+      console.log(el,'enter')
+      // ...
+      done()
+    },
+    afterEnter(el) {
+      console.log(el,'afterEnter')
+      // ...
+    },
+    enterCancelled(el) {
+      // ...
+    },
+
+    // --------
+    // LEAVING
+    // --------
+
+    beforeLeave(el) {
+      // ...
+    },
+    // the done callback is optional when
+    // used in combination with CSS
+    leave(el, done) {
+      // ...
+      done()
+    },
+    afterLeave(el) {
+      // ...
+    },
+    // leaveCancelled only available with v-show
+    leaveCancelled(el) {
+      // ...
     }
   }
 }

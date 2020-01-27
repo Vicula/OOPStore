@@ -42,6 +42,7 @@ export default {
 <style>
 .shop{
   padding:100px;
+  min-height: 400px;
 }
 
 </style>
