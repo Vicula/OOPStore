@@ -1,9 +1,5 @@
 <template>
-  <section class="hero" v-observe-visibility="visibilityChanged">
-    <div class="foreground">
-      <h1>Find what<br/>Moves you</h1>
-      <div class="img"><img :src="require(`@/assets/billboard1.png`)"/></div>
-    </div>
+  <section class="billboard2" v-observe-visibility="visibilityChanged">
     <div class="background">
       <div class="row row1">
         <span class="shoe"><img :src="require('@/assets/vulcan.png')" /></span>
@@ -55,12 +51,12 @@
     },
     mounted(){
 
-        gsap.set(`.hero .row .shoe`, {
+        gsap.set(`.billboard2 .row .shoe`, {
           x:(b)=>{
             return b * 250;
           }
         })
-      this.anim = gsap.to(`.hero .row .shoe`, 50, {
+      this.anim = gsap.to(`.billboard2 .row .shoe`, 50, {
           ease: 'none',
           x: '+=2000', //move each box 500px to right
           modifiers: {
@@ -81,65 +77,14 @@
   }
 </script>
 <style>
-  .hero{
-    width:100%;
+  .billboard2{
+     width:100%;
     height:calc(100vh - 80px);
     background:#111;
     position: relative;
-    max-height: 700px;
     overflow:hidden;
   }
-
-  .row{
-    overflow: hidden;
-    position: relative;
-    height: 200px;
-    width:2000px;
-    left:50%;
-    transform: translate(-50%,0);
+  .billboard2 .background{
+    transform: rotateZ(45deg) translate(10%,99%);
   }
-
-  .background{
-    transform: rotateZ(20deg);
-    opacity: 0.4;
-  }
-
-  .shoe{
-    position:absolute;
-    width:200px;
-  }
-  .row2 {
-    transform: translate(-50%,0) rotateY(180deg);
-  }
-  .shoe img{
-    width: 100%;
-  }
-
-  .hero .foreground h1{
-    position: absolute;
-    z-index: 1;
-    left: 20%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-  }
-  .hero .foreground .img{
-    position: absolute;
-    right:5%;
-    transform: translate(0%,-50%);
-    top:45%;
-    width:600px;
-    z-index: 1;
-  }
-  .img img{width:100%;}
-  .hero .foreground h1{
-    font-size: 60px;
-    font-size: 72px;
-    color:White;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background: -webkit-linear-gradient(#eee, #555);
-     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
 </style>

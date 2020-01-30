@@ -1,6 +1,6 @@
 <template>
   <div class="siteBody" >
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/ModifiersPlugin.min.js"/> -->
+
     <section class="siteWrap">
       <error><siteHeader /></error>
       <nuxt />

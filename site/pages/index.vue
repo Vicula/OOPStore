@@ -8,7 +8,7 @@
     <div class="shop">
       <prodgrid :products="items" :rows="3" />
     </div>
-    <billboard />
+    <billboard2 />
     <div class="shop">
       <prodgrid :products="items" :rows="5" />
     </div>
@@ -18,12 +18,14 @@
 <script>
 import hero from '~/components/home/hero'
 import billboard from '~/components/home/billboard'
+import billboard2 from '~/components/home/billboard2'
 import prodgrid from '~/components/productGrid/product-grid'
 import {mapState,mapActions} from 'vuex'
 export default {
   components:{
     prodgrid,
     billboard,
+    billboard2,
     hero
   },
   methods:{
