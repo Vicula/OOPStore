@@ -1,6 +1,6 @@
 <template>
   <section class="hero">
-    <div class="foreground"><h1>Find what<br/>Moves you</h1><img :src="require(`@/assets/hero${setImg}.png`)"/></div>
+    <div class="foreground"><h1>Find what<br/>Moves you</h1><img :src="require(`@/assets/billboard1.png`)"/></div>
     <div class="background">
       <div class="row row1">
         <span class="shoe"><img :src="require('@/assets/vulcan.png')" /></span>
@@ -113,9 +113,9 @@
   .foreground img{
     position: absolute;
     right:5%;
-    transform: translate(0%,-50%) rotateY(180deg);
-    top:43%;
-    width:500px;
+    transform: translate(0%,-50%);
+    top:50%;
+    width:600px;
     z-index: 1;
   }
   .foreground h1{
