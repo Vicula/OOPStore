@@ -1,6 +1,6 @@
 <template>
   <section class="hero">
-    <div class="foreground"><h1>Find what<br/>Moves you</h1></div>
+    <div class="foreground"><h1>Find what<br/>Moves you</h1><img :src="require(`@/assets/hero${setImg}.png`)"/></div>
     <div class="background">
       <div class="row row1">
         <span class="shoe"><img :src="require('@/assets/vulcan.png')" /></span>
@@ -38,8 +38,12 @@
 <script>
   import gsap from "gsap";
   export default {
+    data:()=>{
+      return {
+        setImg: '3'
+      }
+    },
     mounted(){
-
       for(let i=1;i<4;i++){
         gsap.set(`.row${i} .shoe`, {
 
@@ -99,12 +103,20 @@
     width: 100%;
   }
 
-  .foreground{
+  .foreground h1{
     position: absolute;
     z-index: 1;
     left: 20%;
     top: 50%;
     transform: translate(-50%,-50%);
+  }
+  .foreground img{
+    position: absolute;
+    right:5%;
+    transform: translate(0%,-50%) rotateY(180deg);
+    top:43%;
+    width:500px;
+    z-index: 1;
   }
   .foreground h1{
     font-size: 60px;
