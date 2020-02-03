@@ -9,11 +9,10 @@ jobs:
   test_e2e:
     docker:
       - image: circleci/node:11-browsers
-    # working_directory: ~/repo/site
+    working_directory: ~/site
     steps:
       - checkout
       # - run: cd ..; npm run start
-      - run: cd site
       - run: ls -1
       - run: yarn install:e2e
       - run:
