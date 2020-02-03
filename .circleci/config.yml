@@ -14,7 +14,7 @@ jobs:
       - checkout
       # - run: cd ..; npm run start
       - run: ls -1
-      - run: yarn install:e2e
+      - run: cd site;yarn install:e2e
       - run:
           name: set var
           command: echo "export CHROME_VER=`google-chrome --product-version`" >> $BASH_ENV
