@@ -12,8 +12,8 @@ jobs:
     working_directory: ~/project/site
     steps:
       - checkout
+      - run: npm install
       - run: npm run start
-      - run: ls -1
       - run: cd site;yarn install:e2e
       - run:
           name: set var
