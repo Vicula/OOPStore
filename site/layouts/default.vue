@@ -1,6 +1,5 @@
 <template>
   <div class="siteBody" >
-
     <section class="siteWrap">
       <error><siteHeader /></error>
       <nuxt />
