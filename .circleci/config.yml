@@ -3,12 +3,12 @@ jobs:
   chrome_version:
     docker:
       - image: circleci/node:11-browsers
-    working_directory: ~/repo
+    working_directory: ~/project
     steps:
       - run: google-chrome --product-version
   test_e2e:
     docker:
-      - image: selenium/standalone-chrome:3.1.0
+      - image: circleci/node:11-browsers
     working_directory: ~/project
     steps:
       - checkout
@@ -20,6 +20,7 @@ jobs:
           name: set var
           command: echo "export CHROME_VER=`google-chrome --product-version`" >> $BASH_ENV
       - run: echo "$CHROME_VER"
+      - run: npm install -g webdriver-manager
       - run: sudo webdriver-manager update --versions.chrome=$CHROME_VER
       - run: cd site;yarn test:e2e
 workflows:
