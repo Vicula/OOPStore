@@ -3,17 +3,17 @@ jobs:
   chrome_version:
     docker:
       - image: circleci/node:11-browsers
-    working_directory: ~/site
+    working_directory: ~/repo
     steps:
       - run: google-chrome --product-version
   test_e2e:
     docker:
       - image: circleci/node:11-browsers
-    working_directory: ~/site
+    # working_directory: ~/repo/site
     steps:
       - checkout
       # - run: cd ..; npm run start
-      # - run: cd site
+      - run: cd site
       - run: yarn install:e2e
       - run:
           name: set var
