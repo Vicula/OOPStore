@@ -20,6 +20,11 @@ jobs:
           name: set var
           command: echo "export CHROME_VER=`google-chrome --product-version`" >> $BASH_ENV
       - run: echo "$CHROME_VER"
+      -run
+    name: Update Chromedriver
+    command: |
+        sudo apt-get update
+        sudo apt-get install google-chrome-stable
       - run: sudo npm install -g webdriver-manager
       - run: sudo webdriver-manager update --versions.chrome=79
       - run: cd site;yarn test:e2e
