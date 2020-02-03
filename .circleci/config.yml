@@ -12,10 +12,10 @@ jobs:
     working_directory: ~/project
     steps:
       - checkout
-      - run: npm install
-      - run: npm run start
-      - run: cd site;yarn install
-      - run: cd site;yarn dev
+      # - run: npm install
+      # - run: npm run start
+      # - run: cd site;yarn install
+      # - run: cd site;yarn dev
       - run:
           name: set var
           command: echo "export CHROME_VER=`google-chrome --product-version`" >> $BASH_ENV
