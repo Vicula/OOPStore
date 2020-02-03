@@ -9,7 +9,7 @@ jobs:
   test_e2e:
     docker:
       - image: circleci/node:11-browsers
-    working_directory: ~/project/site
+    working_directory: ~/project
     steps:
       - checkout
       - run: npm install
