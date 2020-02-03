@@ -226,7 +226,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scroped lang="scss">
   a{text-decoration: none;}
   .prodSwatch{
      position: absolute;

@@ -41,7 +41,7 @@ export default {
 }
 </script>
 
-<style>
+<style scroped lang="scss">
 .shop{
   padding:100px;
   min-height: 400px;

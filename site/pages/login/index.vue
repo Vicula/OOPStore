@@ -41,7 +41,7 @@ export default {
 }
 </script>
 
-<style>
+<style scroped lang="scss">
 
 .login_register{
   padding: 150px 100px;

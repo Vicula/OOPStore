@@ -76,7 +76,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scroped lang="scss">
 
 .productsDisplay{
   padding:50px;

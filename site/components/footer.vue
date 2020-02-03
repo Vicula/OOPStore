@@ -2,4 +2,4 @@
   <section />
 </template>
 <script></script>
-<style></style>
+<style scroped lang="scss"></style>

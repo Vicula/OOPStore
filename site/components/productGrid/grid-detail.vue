@@ -27,7 +27,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scroped lang="scss">
   .product{
     display:flex;
     justify-content: center;

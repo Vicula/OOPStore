@@ -76,7 +76,7 @@
     }
   }
 </script>
-<style>
+<style scroped lang="scss">
   .billboard2{
      width:100%;
     height:calc(100vh - 80px);

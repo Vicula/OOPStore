@@ -34,6 +34,6 @@ export default {
 }
 </script>
 
-<style>
+<style scroped lang="scss">
 
 </style>

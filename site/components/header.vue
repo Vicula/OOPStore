@@ -43,7 +43,7 @@ export default {
 
 }
 </script>
-<style>
+<style scroped lang="scss">
 
 .c-header {
   position: fixed;

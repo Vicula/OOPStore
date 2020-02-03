@@ -76,7 +76,7 @@
     }
   }
 </script>
-<style>
+<style scroped lang="scss">
   .billboard1{
      width:100%;
     height:calc(100vh - 80px);
@@ -85,6 +85,6 @@
     overflow:hidden;
   }
   .billboard1 .background{
-    transform: translate(-9%,0) rotateY(180deg) rotateZ(31deg);
+    transform: translate(-4%,0) rotateY(180deg) rotateZ(31deg);
   }
 </style>

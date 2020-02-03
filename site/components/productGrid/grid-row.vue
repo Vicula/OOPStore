@@ -28,7 +28,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scroped lang="scss">
   .gridRow{
     display:flex;
     justify-content: space-between;

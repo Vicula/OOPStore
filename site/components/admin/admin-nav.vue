@@ -36,7 +36,7 @@ export default {
   },
 }
 </script>
-<style>
+<style scroped lang="scss">
 
 .admin-nav{
   padding:40px 50px;

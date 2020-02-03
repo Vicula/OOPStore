@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style>
+<style scroped lang="scss">
 .container {
   margin: 0 auto;
   min-height: calc(100vh - 81px);

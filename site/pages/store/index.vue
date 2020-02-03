@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style>
+<style scroped lang="scss">
 .container {
   margin: 0 auto;
   min-height: 100vh;

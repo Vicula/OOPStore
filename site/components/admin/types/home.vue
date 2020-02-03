@@ -16,7 +16,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scroped lang="scss">
 
 input{
   width: 250px;
