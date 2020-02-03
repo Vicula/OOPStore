@@ -14,6 +14,7 @@ jobs:
       - checkout
       # - run: cd ..; npm run start
       - run: cd site
+      - run: ls -1
       - run: yarn install:e2e
       - run:
           name: set var
