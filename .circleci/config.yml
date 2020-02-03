@@ -12,7 +12,7 @@ jobs:
     working_directory: ~/project/site
     steps:
       - checkout
-      # - run: cd ..; npm run start
+      - run: npm run start
       - run: ls -1
       - run: cd site;yarn install:e2e
       - run:
@@ -20,7 +20,7 @@ jobs:
           command: echo "export CHROME_VER=`google-chrome --product-version`" >> $BASH_ENV
       - run: echo "$CHROME_VER"
       - run: sudo webdriver-manager update --versions.chrome=$CHROME_VER
-      - run: yarn test:e2e
+      - run: cd site;yarn test:e2e
 workflows:
   build:
     jobs:
