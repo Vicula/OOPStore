@@ -1,0 +1,508 @@
+{
+  "id": "2706acb6-5470-4264-9e0c-a2b263064da3",
+  "version": "2.0",
+  "name": "OOP",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "ee6f7f24-872f-42e9-9620-6cf43543777a",
+    "name": "Home UI",
+    "commands": []
+  }, {
+    "id": "db64e97f-151e-4be8-a63d-7c697496dd19",
+    "name": "Register",
+    "commands": []
+  }, {
+    "id": "58e01fa3-54a4-4f0f-800a-d39f03ea78e5",
+    "name": "Login",
+    "commands": [{
+      "id": "d47c7e85-ed6e-4c87-97b4-30ec8edcac6a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4541920a-e03a-47ed-a42a-01df06505fb4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2215x1417",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b705eb29-a852-448a-aeae-f522cc81841a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ef59ec3-3f1e-46b1-8898-ab83b5b0b3e9",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) .prodSwatch > span:nth-child(2)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) .prodSwatch > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span[2]", "xpath:position"]
+      ],
+      "value": "17.3125,16.8125"
+    }, {
+      "id": "b175ab78-c2d3-4a91-9d5f-50ec968da635",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) .prodSwatch > span:nth-child(2)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) .prodSwatch > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span[2]", "xpath:position"]
+      ],
+      "value": "17.3125,16.8125"
+    }, {
+      "id": "830b1528-ccc7-4afd-a2fd-2275fe8e8595",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) .prodSwatch > span:nth-child(2)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) .prodSwatch > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span[2]", "xpath:position"]
+      ],
+      "value": "17.3125,16.8125"
+    }, {
+      "id": "da971e2f-504d-428b-bb41-b255a26d6b99",
+      "comment": "",
+      "command": "click",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) .prodSwatch > span:nth-child(2)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) .prodSwatch > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0fcdd52-1927-4628-9d38-6f33307a684a",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(4)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span[4]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span[4]", "xpath:position"]
+      ],
+      "value": "11.3125,13.8125"
+    }, {
+      "id": "a5d3d019-9033-4275-989b-d1a2fcb1fc0d",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(4)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span[4]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span[4]", "xpath:position"]
+      ],
+      "value": "11.3125,13.8125"
+    }, {
+      "id": "1d98d883-7e38-49da-b69d-b09c1ee284b3",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(4)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span[4]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span[4]", "xpath:position"]
+      ],
+      "value": "11.3125,13.8125"
+    }, {
+      "id": "52563590-b985-48e8-925a-75fa2650405c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(4)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span[4]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a7b83c4-5a91-40aa-9704-5ef57a5c0465",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(6)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span[6]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span[6]", "xpath:position"]
+      ],
+      "value": "8.3125,21.8125"
+    }, {
+      "id": "39b20792-eea5-45bb-973f-40d016f7cd02",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(6)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span[6]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span[6]", "xpath:position"]
+      ],
+      "value": "8.3125,21.8125"
+    }, {
+      "id": "0d8d65c4-56f5-47a6-b375-177d567b02c7",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(6)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span[6]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span[6]", "xpath:position"]
+      ],
+      "value": "8.3125,21.8125"
+    }, {
+      "id": "213996d8-dfd5-44aa-8441-bcd319b60762",
+      "comment": "",
+      "command": "click",
+      "target": "css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(6)",
+      "targets": [
+        ["css=.shop:nth-child(2) .prodWrap:nth-child(1) span:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/div/div/div/div[2]/span[6]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/span[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b28c9e5-bc32-4299-8439-c154e1677f85",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": "12.5,8.4375"
+    }, {
+      "id": "4bf5cf73-224e-43cd-82f2-ee6889488074",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": "12.5,8.4375"
+    }, {
+      "id": "d48e5c8b-54bf-4174-9247-11e1d799a634",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": "12.5,8.4375"
+    }, {
+      "id": "e6f3a900-d6d0-4d8a-afe1-e7a9c135eda3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5c8379f-e614-4878-91cd-cf7d72bc76c8",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(6)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div/div/div[3]/div/div[2]/span[6]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div[2]/span[6]", "xpath:position"]
+      ],
+      "value": "6.5,12.4375"
+    }, {
+      "id": "907a1153-1923-48a5-8caa-b4ac52533d15",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(6)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div/div/div[3]/div/div[2]/span[6]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div[2]/span[6]", "xpath:position"]
+      ],
+      "value": "6.5,12.4375"
+    }, {
+      "id": "1ed1ce73-fe41-4fae-9d83-33d637f87294",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(6)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div/div/div[3]/div/div[2]/span[6]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div[2]/span[6]", "xpath:position"]
+      ],
+      "value": "6.5,12.4375"
+    }, {
+      "id": "33729aca-a015-4b2c-b992-afb70d5a0840",
+      "comment": "",
+      "command": "click",
+      "target": "css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(6)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div/div/div[3]/div/div[2]/span[6]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div[2]/span[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9485d10b-3953-40b4-b2c4-0072c6cc0656",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(8)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(8)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div/div/div[3]/div/div[2]/span[8]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div[2]/span[8]", "xpath:position"]
+      ],
+      "value": "7.5,15.4375"
+    }, {
+      "id": "979fd542-9148-402f-ab34-bbf9658d196d",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(8)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(8)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div/div/div[3]/div/div[2]/span[8]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div[2]/span[8]", "xpath:position"]
+      ],
+      "value": "7.5,15.4375"
+    }, {
+      "id": "254850d8-d74d-4eb2-b054-60e459236a16",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(8)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(8)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div/div/div[3]/div/div[2]/span[8]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div[2]/span[8]", "xpath:position"]
+      ],
+      "value": "7.5,15.4375"
+    }, {
+      "id": "8fc21746-d165-43fd-97ec-289da56a4ea4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(8)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(1) > .gridRow > .prodWrap:nth-child(3) span:nth-child(8)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div/div/div[3]/div/div[2]/span[8]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div[2]/span[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b19d291f-7f89-4c12-9215-edadf2969b9c",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div[3]/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": "14.5,10.6875"
+    }, {
+      "id": "323dd6f8-f6ae-4522-b5b7-9cd76100d5bc",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div[3]/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": "14.5,10.6875"
+    }, {
+      "id": "e180cea8-58aa-4c2c-99b5-f28f877b936d",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div[3]/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": "14.5,10.6875"
+    }, {
+      "id": "550453e1-b536-47f0-a470-85336fdb55ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div[3]/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a978052-3098-4149-b8cd-64a7acd28dca",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(4)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div[3]/div/div[3]/div/div[2]/span[4]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div[2]/span[4]", "xpath:position"]
+      ],
+      "value": "9.5,13.6875"
+    }, {
+      "id": "fb2b4089-d336-4462-b20a-3334854ff726",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(4)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div[3]/div/div[3]/div/div[2]/span[4]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div[2]/span[4]", "xpath:position"]
+      ],
+      "value": "9.5,13.6875"
+    }, {
+      "id": "2160b6b0-2ed7-45b4-b343-ff0d3d7f76cc",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(4)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div[3]/div/div[3]/div/div[2]/span[4]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div[2]/span[4]", "xpath:position"]
+      ],
+      "value": "9.5,13.6875"
+    }, {
+      "id": "f067558e-dff4-4012-9989-5fdd785ee0eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(4)",
+      "targets": [
+        ["css=.shop:nth-child(4) div:nth-child(3) .prodWrap:nth-child(3) span:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[2]/div/div[3]/div/div[3]/div/div[2]/span[4]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div[2]/span[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f09f0f01-3c25-43c2-97d4-0680a7440752",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[3]/div/div[2]/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": "11.5,13.9375"
+    }, {
+      "id": "004dbd25-af83-4a34-9c51-bb0cdac3ac76",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[3]/div/div[2]/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": "11.5,13.9375"
+    }, {
+      "id": "b430fc21-734f-4a4a-96bb-cb1f7efbbcb0",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[3]/div/div[2]/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": "11.5,13.9375"
+    }, {
+      "id": "5de82960-23d1-4907-8d3e-9f06091246c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(1)",
+      "targets": [
+        ["css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[3]/div/div[2]/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7da614f1-4875-43fa-9e1d-82fa0dc31fda",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(5)",
+      "targets": [
+        ["css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[3]/div/div[2]/div/div[3]/div/div[2]/span[5]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div[3]/div/div[2]/span[5]", "xpath:position"]
+      ],
+      "value": "8.5,9.9375"
+    }, {
+      "id": "a1fd71d2-8c98-45e1-8d5d-045e66b61267",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(5)",
+      "targets": [
+        ["css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[3]/div/div[2]/div/div[3]/div/div[2]/span[5]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div[3]/div/div[2]/span[5]", "xpath:position"]
+      ],
+      "value": "8.5,9.9375"
+    }, {
+      "id": "2a97de74-bde4-4ef2-84a5-2c08909770c8",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(5)",
+      "targets": [
+        ["css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[3]/div/div[2]/div/div[3]/div/div[2]/span[5]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div[3]/div/div[2]/span[5]", "xpath:position"]
+      ],
+      "value": "8.5,9.9375"
+    }, {
+      "id": "4ec06d72-8628-4e55-8ec4-33aa8892f871",
+      "comment": "",
+      "command": "click",
+      "target": "css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(5)",
+      "targets": [
+        ["css=.shop:nth-child(6) div:nth-child(2) .prodWrap:nth-child(3) span:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div[3]/div/div[2]/div/div[3]/div/div[2]/span[5]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div[3]/div/div[2]/span[5]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "fce5f07b-d580-4a94-ab55-c6fc07134af4",
+    "name": "Homepage",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["58e01fa3-54a4-4f0f-800a-d39f03ea78e5"]
+  }, {
+    "id": "05dc7068-29ba-422e-9ca8-b574c5862713",
+    "name": "PDP",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }, {
+    "id": "3264da6c-5c0b-4dfe-b95b-76649b2d7ba3",
+    "name": "Admin/Login",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}
